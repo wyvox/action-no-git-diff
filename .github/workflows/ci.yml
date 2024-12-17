@@ -41,7 +41,7 @@ jobs:
         continue-on-error: true
       - if: always()
         run: |
-          if "[[ ${{ steps.self.conclusion }}" == "failure" ]]; then
+          if [[ "${{ steps.self.conclusion }}" == "failure" ]]; then
             echo "Successfully failed"
             exit 0;
           else
