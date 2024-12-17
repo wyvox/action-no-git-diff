@@ -1,0 +1,1 @@
+# action-no-git-diff
