@@ -6,7 +6,6 @@ description: |
 # None
 inputs: {}
 
-
 runs:
   using: composite
   steps:
@@ -18,11 +17,11 @@ runs:
 
     # - name: "Debug action directory (CWD)"
     #   shell: bash
-    #   run: ls -la 
+    #   run: ls -la
 
     # - name: "Debug action directory (GITHUB_ACTION_PATH)"
     #   shell: bash
-    #   run: ls -la $GITHUB_ACTION_PATH 
+    #   run: ls -la $GITHUB_ACTION_PATH
 
     - name: "Check if a git diff exists. Error if it does"
       shell: bash
