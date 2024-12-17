@@ -25,3 +25,42 @@ jobs:
         with:
           node-version: ${{ matrix.node }}
       - run: pnpm lint:fix
+
+
+  test_success:
+    strategy:
+      matrix:
+        os:
+          - ubuntu-latest
+          # - windows-latest
+          - macos-latest
+    runs-on: ${{ matrix.os }}
+    steps:
+      - uses: actions/checkout@v4
+      - uses: ./
+
+  test_failure:
+    strategy:
+      matrix:
+        os:
+          - ubuntu-latest
+          # - windows-latest
+          - macos-latest
+    runs-on: ${{ matrix.os }}
+    steps:
+      - uses: actions/checkout@v4
+      - run: touch "file-not-in-git.txt"
+      - uses: ./
+        id: self
+        continue-on-error: true
+      - if: always()
+        run: |
+          if [ ${{ steps.self.conclusion == 'failure' }} ]; then
+            echo "Successfully failed"
+            exit 0;
+          else
+            echo "Unsuccessfully failed. Expected failure."
+            exit 1
+          fi
+
+
