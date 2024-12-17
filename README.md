@@ -3,7 +3,7 @@
 Checks the repo for a git diff, and errors if there is a diff. 
 
 Usage:
-```
+```yml
 steps:
   # ...
   - run: ./my-action/that-might-cause-a/diff 
