@@ -35,13 +35,13 @@ jobs:
     runs-on: ${{ matrix.os }}
     steps:
       - uses: actions/checkout@v4
-      - run: touch "file-not-in-git.txt"
+      - run: rm .prettierignore 
       - uses: ./
         id: self
         continue-on-error: true
       - if: always()
         run: |
-          if [[ ${{ steps.self.conclusion }} == "failure" ]]; then
+          if "[[ ${{ steps.self.conclusion }}" == "failure" ]]; then
             echo "Successfully failed"
             exit 0;
           else
