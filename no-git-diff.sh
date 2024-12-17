@@ -21,7 +21,7 @@ lightBlue "Checking for git diffs..."
 
 
 italic ""
-italic "Using $(code 'git diff --exit-code') allows ensuring stability of our commands and to reduce flakiness in CI."
+italic "Using $(code 'git diff --exit-code') aids in ensuring stability of our commands to reduce flakiness in CI."
 italic ""
 italic "If you see an error from this task, please check the command(s) from the previous step(s) and try running them locally."
 italic "To fix, you will need to either commit the changes or add new files to the local per-project .gitignore file."

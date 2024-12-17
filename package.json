@@ -1,0 +1,10 @@
+{
+	"name": "action-no-git-diff",
+	"scripts": {
+		"lint": "prettier --check .",
+		"lint:fix": "prettier --write ."
+	},
+	"devDependencies": {
+		"prettier": "^3.3.4"
+	}
+}
