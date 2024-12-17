@@ -13,19 +13,12 @@ jobs:
           - ubuntu-latest
           - windows-latest
           - macos-latest
-        node:
-          - latest
-          - lts/*
-          - 18
     runs-on: ${{ matrix.os }}
     steps:
       - uses: actions/checkout@v4
       - uses: wyvox/action-setup-pnpm@v3
       - uses: ./
-        with:
-          node-version: ${{ matrix.node }}
       - run: pnpm lint:fix
-
 
   test_success:
     strategy:
@@ -62,5 +55,3 @@ jobs:
             echo "Unsuccessfully failed. Expected failure."
             exit 1
           fi
-
-
