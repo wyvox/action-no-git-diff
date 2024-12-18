@@ -35,7 +35,7 @@ jobs:
     runs-on: ${{ matrix.os }}
     steps:
       - uses: actions/checkout@v4
-      - run: rm .prettierignore 
+      - run: rm .prettierignore
       - uses: ./
         id: self
         continue-on-error: true
