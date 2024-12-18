@@ -38,7 +38,6 @@ jobs:
       - run: rm .prettierignore
       - uses: ./
         id: self
-        continue-on-error: true
       - if: always()
         run: |
           if [[ "${{ steps.self.conclusion }}" == "failure" ]]; then
