@@ -28,7 +28,6 @@ Using 'git diff --exit-code' aids in ensuring stability of our commands to reduc
 If you see an error from this task, please check the command(s) from the previous step(s) and try running them locally.
 To fix, you will need to either commit the changes or add new files to the local per-project .gitignore file.
 
-
 ✨ Congrats, the repo has no changed files at the moment. ✨
 
 </details>
@@ -45,7 +44,6 @@ Using 'git diff --exit-code' aids in ensuring stability of our commands to reduc
 
 If you see an error from this task, please check the command(s) from the previous step(s) and try running them locally.
 To fix, you will need to either commit the changes or add new files to the local per-project .gitignore file.
-
 
 diff --git a/.prettierignore b/.prettierignore
 deleted file mode 100644
