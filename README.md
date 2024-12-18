@@ -8,7 +8,7 @@ Usage:
 steps:
   # ...
   - run: ./my-action/that-might-cause-a/diff
-  - uses: wyvox/action-no-git-diff@1
+  - uses: wyvox/action-no-git-diff@v1
 ```
 
 An example command that might cause a diff would be a monorepo build, via turbo, nx, moonrepo, rollup, vite, or some other tool.
