@@ -1,7 +1,8 @@
 name: Ensure no git diff exists
-description: |
-  Use git diff --exit-code to ensure stability of commands and to reduce flakiness in CI.
-  If you see an error from this task, please check the command(s) from the previous step(s) and try running them locally.
+description: Use git diff --exit-code to ensure stability of commands and to reduce flakiness in CI.
+branding:
+  icon: award
+  color: green
 
 # None
 inputs: {}
